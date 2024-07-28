@@ -61,3 +61,12 @@ done
 chmod +x auto_rollback.sh
 ./auto_rollback.sh
 ```
+
+<h1 align="center">Temp Dosyalarını Silme</h1>
+
+>Bu komut, /tmp dizininde son 1 saat içinde değiştirilmeyen dosyaları silecek ve son 1 saat içinde değiştirilen dosyaları koruyacaktır.
+
+```
+find /tmp -type f ! -path "/tmp/screen*" -mmin +60 -exec rm -f {} \;
+```
+> [Metin hoca](https://x.com/0xmtnslk/status/1813667055599784124) tarafından paylaşılmış, benim tarafımdan düzenlenmiştir.
